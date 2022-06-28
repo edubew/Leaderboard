@@ -611,34 +611,30 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var Score = /*#__PURE__*/_createClass(function Score(id, name, points) {
-  _classCallCheck(this, Score);
-
-  this.name = name;
-  this.points = points;
-  this.id = id;
-}); // Create the form dynamically
-
+var scores = [{
+  name: 'Winnie',
+  points: 85
+}, {
+  name: 'Edube',
+  points: 80
+}, {
+  name: 'Lorians',
+  points: 90
+}, {
+  name: 'Mitchelle',
+  points: 75
+}];
+var scoresContainer = scores.map(function (score) {
+  return "\n  <tr>\n    <td>".concat(score.name, "</td>\n    <td>").concat(score.points, "</td>\n  </tr>\n");
+}).join('');
+var tableScores = document.querySelector('.table-scores');
+tableScores.innerHTML += scoresContainer; // Create the form dynamically
 
 var addScore = document.querySelector('#add-scores');
 var form = document.createElement('form');
 form.innerHTML = "\n <input type =\"text\" placeholder = \"Your name\" required>\n <input type =\"text\" placeholder = \"Your score\" required>\n <button type =\"submit\" class =\"btn\">Submit</button>\n";
-addScore.appendChild(form); // Create the scores tables
-
-var addScoreToTable = function addScoreToTable(score) {
-  var tableScores = document.querySelector('.table-scores');
-  var row = document.createElement('tr');
-  row.innerHTML = "\n <td>".concat(score.name, "</td>\n <td>").concat(score.points, "</td>\n");
-  tableScores.appendChild(row);
-};
+addScore.appendChild(form);
 })();
 
 /******/ })()

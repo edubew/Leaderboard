@@ -1,12 +1,33 @@
 import './styles/style.css';
 
-class Score {
-  constructor(id, name, points) {
-    this.name = name;
-    this.points = points;
-    this.id = id;
-  }
-}
+const scores = [
+  {
+    name: 'Winnie:',
+    points: 85,
+  },
+   {
+    name: 'Edube:',
+    points: 80,
+  },
+   {
+    name: 'Lorians:',
+    points: 90,
+  },
+   {
+    name: 'Mitchelle:',
+    points: 75,
+  },
+];
+
+const scoresContainer = scores.map((score) => `
+  <tr>
+    <td>${score.name}</td>
+    <td>${score.points}</td>
+  </tr>
+`).join('')
+
+const tableScores = document.querySelector('.table-scores');
+tableScores.innerHTML += scoresContainer;
 
 // Create the form dynamically
 const addScore = document.querySelector('#add-scores');
@@ -19,16 +40,3 @@ form.innerHTML = `
 `;
 addScore.appendChild(form);
 
-// Create the scores tables
-const addScoreToTable = (score) => {
-  const tableScores = document.querySelector('.table-scores');
-
-  const row = document.createElement('tr');
-  row.innerHTML = `
- <td>${score.name}</td>
- <td>${score.points}</td>
-`;
-  tableScores.appendChild(row);
-};
-
-// Parse data into local storage
