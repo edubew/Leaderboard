@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 4%;
+  margin: 10% 12%;
+}
+
+#scores {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
