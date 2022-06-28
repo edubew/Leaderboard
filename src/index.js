@@ -1,9 +1,9 @@
 import './styles/style.css';
 
 class Score {
-  constructor(id, name, score) {
+  constructor(id, name, points) {
     this.name = name;
-    this.score = score;
+    this.points = points;
     this.id = id;
   }
 }
@@ -18,3 +18,17 @@ form.innerHTML = `
  <button type ="submit" class ="btn">Submit</button>
 `;
 addScore.appendChild(form);
+
+// Create the scores tables
+const addScoreToTable = (score) => {
+  const tableScores = document.querySelector('.table-scores');
+
+  const row = document.createElement('tr');
+  row.innerHTML = `
+ <td>${score.name}</td>
+ <td>${score.points}</td>
+`;
+  tableScores.appendChild(row);
+};
+
+// Parse data into local storage

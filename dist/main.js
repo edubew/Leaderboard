@@ -619,11 +619,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
 
-var Score = /*#__PURE__*/_createClass(function Score(id, name, score) {
+var Score = /*#__PURE__*/_createClass(function Score(id, name, points) {
   _classCallCheck(this, Score);
 
   this.name = name;
-  this.score = score;
+  this.points = points;
   this.id = id;
 }); // Create the form dynamically
 
@@ -631,7 +631,14 @@ var Score = /*#__PURE__*/_createClass(function Score(id, name, score) {
 var addScore = document.querySelector('#add-scores');
 var form = document.createElement('form');
 form.innerHTML = "\n <input type =\"text\" placeholder = \"Your name\" required>\n <input type =\"text\" placeholder = \"Your score\" required>\n <button type =\"submit\" class =\"btn\">Submit</button>\n";
-addScore.appendChild(form);
+addScore.appendChild(form); // Create the scores tables
+
+var addScoreToTable = function addScoreToTable(score) {
+  var tableScores = document.querySelector('.table-scores');
+  var row = document.createElement('tr');
+  row.innerHTML = "\n <td>".concat(score.name, "</td>\n <td>").concat(score.points, "</td>\n");
+  tableScores.appendChild(row);
+};
 })();
 
 /******/ })()
