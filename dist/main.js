@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nsection {\n  display: grid;\n  grid-template-columns: auto auto;\n  column-gap: 4%;\n  margin: 10% 12%;\n}\n\n#scores {\n  display: flex;\n  margin: 10px;\n  align-items: center;\n}", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AACF;;AAEA;EACE,aAAA;EACA,gCAAA;EACA,cAAA;EACA,eAAA;AACF;;AAEA;EACE,aAAA;EACA,YAAA;EACA,mBAAA;AACF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nsection {\r\n  display: grid;\r\n  grid-template-columns: auto auto;\r\n  column-gap: 4%;\r\n  margin: 10% 12%;\r\n}\r\n\r\n#scores {\r\n  display: flex;\r\n  margin: 10px;\r\n  align-items: center;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -611,7 +611,27 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var Score = /*#__PURE__*/_createClass(function Score(id, name, score) {
+  _classCallCheck(this, Score);
+
+  this.name = name;
+  this.score = score;
+  this.id = id;
+}); // Create the form dynamically
+
+
+var addScore = document.querySelector('#add-scores');
+var form = document.createElement('form');
+form.innerHTML = "\n <input type =\"text\" placeholder = \"Your name\" required>\n <input type =\"text\" placeholder = \"Your score\" required>\n <button type =\"submit\" class =\"btn\">Submit</button>\n";
+addScore.appendChild(form);
 })();
 
 /******/ })()
