@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve --open",
     "build": "webpack --mode production",
-    "dev": "webpack serve --mode development",
-    "start": "webpack --config webpack.config.js --watch"
+    "dev": "webpack serve --mode development"
   },
   "repository": {
     "type": "git",
