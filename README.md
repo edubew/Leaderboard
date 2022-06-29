@@ -1,7 +1,7 @@
 # Leaderboard
 
 ## Description
-- The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external
+- The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external leaderboard API
 
 ## Built With
 
@@ -53,3 +53,6 @@ Give a ⭐️ if you like this project!
 - etc
 
 ## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
+
