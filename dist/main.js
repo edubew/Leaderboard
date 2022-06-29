@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nsection {\n  display: grid;\n  grid-template-columns: auto auto;\n  column-gap: 4%;\n  margin: 10% 12%;\n}\n\n#scores {\n  display: flex;\n  margin: 10px;\n  align-items: center;\n}", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AACF;;AAEA;EACE,aAAA;EACA,gCAAA;EACA,cAAA;EACA,eAAA;AACF;;AAEA;EACE,aAAA;EACA,YAAA;EACA,mBAAA;AACF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nsection {\r\n  display: grid;\r\n  grid-template-columns: auto auto;\r\n  column-gap: 4%;\r\n  margin: 10% 12%;\r\n}\r\n\r\n#scores {\r\n  display: flex;\r\n  margin: 10px;\r\n  align-items: center;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nh1 {\n  text-align: center;\n  margin: 3%;\n}\n\n#page-section {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n}\n\n.scores-header {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n  margin-bottom: 20px;\n}\n\ntable {\n  border: 1px solid;\n  text-align: center;\n  width: 100%;\n  border-collapse: collapse;\n}\n\ntr, td {\n  padding: 15px;\n}\n\ninput[type=text] {\n  margin: 5%;\n  padding: 6px;\n  width: 100%;\n  font-size: 14px;\n  border: 1px solid black;\n}\n\nbutton {\n  padding: 5px;\n  border: 2px solid black;\n  box-shadow: 2px 4px;\n}\n\ntr:nth-child(even) {\n  background: #997e93;\n}", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AACF;;AAEA;EACE,kBAAA;EACA,UAAA;AACF;;AAEA;EACE,aAAA;EACA,mBAAA;EACA,6BAAA;AACF;;AAEA;EACE,aAAA;EACA,mBAAA;EACA,6BAAA;EACA,mBAAA;AACF;;AAEA;EACM,iBAAA;EACA,kBAAA;EACA,WAAA;EACA,yBAAA;AACN;;AAEC;EACC,aAAA;AACF;;AAEC;EACE,UAAA;EACA,YAAA;EACA,WAAA;EACA,eAAA;EACA,uBAAA;AACH;;AAEC;EACE,YAAA;EACA,uBAAA;EACA,mBAAA;AACH;;AAEC;EACE,mBAAA;AACH","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nh1 {\r\n  text-align: center;\r\n  margin: 3%;\r\n}\r\n\r\n#page-section {\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: space-evenly;\r\n}\r\n\r\n.scores-header {\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: space-evenly;\r\n  margin-bottom: 20px;\r\n}\r\n\r\ntable {\r\n      border: 1px solid;\r\n      text-align: center;\r\n      width: 100%;\r\n      border-collapse: collapse;\r\n }\r\n\r\n tr, td {\r\n  padding: 15px;\r\n }\r\n\r\n input[type=\"text\"] {\r\n   margin: 5%;\r\n   padding: 6px;\r\n   width: 100%;\r\n   font-size: 14px;\r\n   border: 1px solid black;\r\n }\r\n\r\n button {\r\n   padding: 5px;\r\n   border: 2px solid black;\r\n   box-shadow: 2px 4px;\r\n }\r\n\r\n tr:nth-child(even) {\r\n   background: #997e93;\r\n }\r\n\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -610,19 +610,22 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "form": () => (/* binding */ form)
+/* harmony export */ });
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
 
 var scores = [{
-  name: 'Winnie',
+  name: 'Winnie:',
   points: 85
 }, {
-  name: 'Edube',
+  name: 'Edube:',
   points: 80
 }, {
-  name: 'Lorians',
+  name: 'Lorians:',
   points: 90
 }, {
-  name: 'Mitchelle',
+  name: 'Mitchelle:',
   points: 75
 }];
 var scoresContainer = scores.map(function (score) {
@@ -631,9 +634,9 @@ var scoresContainer = scores.map(function (score) {
 var tableScores = document.querySelector('.table-scores');
 tableScores.innerHTML += scoresContainer; // Create the form dynamically
 
-var addScore = document.querySelector('#add-scores');
 var form = document.createElement('form');
-form.innerHTML = "\n <input type =\"text\" placeholder = \"Your name\" required>\n <input type =\"text\" placeholder = \"Your score\" required>\n <button type =\"submit\" class =\"btn\">Submit</button>\n";
+form.innerHTML = "\n <input type =\"text\" placeholder = \"Your name\" required></br>\n <input type =\"text\" placeholder = \"Your score\" required></br>\n <button type =\"submit\" class =\"btn\">Submit</button></br>\n";
+var addScore = document.querySelector('#add-scores');
 addScore.appendChild(form);
 })();
 

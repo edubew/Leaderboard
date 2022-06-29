@@ -4,15 +4,50 @@
   box-sizing: border-box;
 }
 
-section {
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 4%;
-  margin: 10% 12%;
+h1 {
+  text-align: center;
+  margin: 3%;
 }
 
-#scores {
+#page-section {
   display: flex;
-  margin: 10px;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
+
+.scores-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+table {
+      border: 1px solid;
+      text-align: center;
+      width: 100%;
+      border-collapse: collapse;
+ }
+
+ tr, td {
+  padding: 15px;
+ }
+
+ input[type="text"] {
+   margin: 5%;
+   padding: 6px;
+   width: 100%;
+   font-size: 14px;
+   border: 1px solid black;
+ }
+
+ button {
+   padding: 5px;
+   border: 2px solid black;
+   box-shadow: 2px 4px;
+ }
+
+ tr:nth-child(even) {
+   background: #997e93;
+ }
+

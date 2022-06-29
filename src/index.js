@@ -30,13 +30,13 @@ const tableScores = document.querySelector('.table-scores');
 tableScores.innerHTML += scoresContainer;
 
 // Create the form dynamically
-const addScore = document.querySelector('#add-scores');
-
-const form = document.createElement('form');
+export const form = document.createElement('form');
 form.innerHTML = `
- <input type ="text" placeholder = "Your name" required>
- <input type ="text" placeholder = "Your score" required>
- <button type ="submit" class ="btn">Submit</button>
+ <input type ="text" placeholder = "Your name" required></br>
+ <input type ="text" placeholder = "Your score" required></br>
+ <button type ="submit" class ="btn">Submit</button></br>
 `;
+const addScore = document.querySelector('#add-scores');
 addScore.appendChild(form);
+
 
