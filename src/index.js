@@ -31,3 +31,9 @@ const postData = async () => {
   name.value = '';
   points.value = '';
 };
+
+const getApiData = async () => {
+  const res = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/');
+  const data = await res.json();
+  getGameScores(data.result);
+};
