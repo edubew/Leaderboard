@@ -1,39 +1,14 @@
 import './styles/style.css';
 
-const tableScores = document.querySelector('.table-scores');
-const name = document.querySelector('.name');
-const points = document.querySelector('.points');
+import { postData, getApiData } from './modules/api.js';
 
-const getGameScores = (gamescore) => {
-  let output = '';
-  gamescore.map((score) => {
-    output += `
-    <tr>
-     <td>${score.username}</td>
-     <td>${score.points}</td>
-    </tr>
-    `;
-    tableScores.innerHTML = output;
-  });
-};
+const reset = document.querySelector('.reset-btn');
+const submit = document.querySelector('.submit-btn');
 
-const postData = async () => {
-  await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/', {
-    method: 'POST',
-    body: JSON.stringify({
-      username: name.value,
-      points: points.value,
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  });
-  name.value = '';
-  points.value = '';
-};
+submit.addEventListener('click', (e) => {
+  e.preventDefault();
+  postData();
+});
 
-const getApiData = async () => {
-  const res = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/');
-  const data = await res.json();
-  getGameScores(data.result);
-};
+reset.addEventListener('click', getApiData);
+window.addEventListener('load', getApiData);
