@@ -16,7 +16,7 @@ export const getGameScores = (gamescore) => {
 };
 
 export const postData = async () => {
-  await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/CH6Z7Rvx4uXkcUW0jwCG/scores',
+  await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/pYFkaMcA8mcPphvtdGOB/scores',
     {
       method: 'POST',
       body: JSON.stringify({
@@ -33,7 +33,7 @@ export const postData = async () => {
 };
 
 export const getApiData = async () => {
-  const res = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/CH6Z7Rvx4uXkcUW0jwCG/scores');
+  const res = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/pYFkaMcA8mcPphvtdGOB/scores');
   const data = await res.json();
   getGameScores(data.result);
 };
