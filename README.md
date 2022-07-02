@@ -51,5 +51,5 @@ Give a ⭐️ if you like this project!
 - Hat tip to anyone whose code was used
 
 ## 📝 License
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/edubew/mit/blob/main/LICENSE) licensed.
 
