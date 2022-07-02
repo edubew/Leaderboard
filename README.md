@@ -12,7 +12,7 @@
 ## Live Demo
 [coming soon](#)
 
-[!Screenshot](src/assets/SCREENSHOT1.PNG)
+![Screenshot](src/assets/SCREENSHOT1.PNG)
 
 
 
