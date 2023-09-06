@@ -4,72 +4,74 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Indie Flower', cursive;
+  font-style: oblique;
 }
 
 body {
   min-height: 100vh;
   top: 0;
-  background: url("../assets/leaderboard2.jpg");
+  background: url("../assets/leaderboard.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 main {
   width: 80%;
   padding: 20px;
-  margin: 3% 10%;
+  margin: 5% 10%;
   border-radius: 20px;
   background:
     linear-gradient(
       to right bottom,
       rgba(255, 255, 255, 0.2),
-      rgba(120, 9, 88, 0.829)
+      rgba(161, 6, 117, 0.829)
     );
+  backdrop-filter: blur(5px); 
 }
 
 h1 {
   text-align: center;
-  margin: 5% 0;
+  margin-top: 5%;
+  margin-bottom: 2%;
 }
 
 #page-section {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  margin: 3%;
+  gap: 4rem;
 }
 
 .scores-header {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 button {
-  width: 100px;
-  padding: 8px;
+  padding: 0.6rem 2rem;
   font-size: 14px;
   font-weight: 600;
-  background: pink;
+  background: rgb(160, 17, 53);
   cursor: pointer;
-  border-radius: 10px;
+  color: #fff;
+  border-radius: 0.8rem;
+  border: none;
 }
 
 .scores-header button {
-  margin-left: 20px;
+  margin-left: 2rem;
 }
 
-table {
-  border: 1px solid;
-  width: 30vw;
-  border-collapse: collapse;
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-tr,
-td {
-  padding: 15px;
-  border-bottom: 2px solid black;
-  font-size: 20px;
+li {
+  list-style: none;
+  border: 2px solid pink;
+  padding: 0.8rem;
+  border-radius: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
@@ -77,16 +79,53 @@ td {
   text-align: center;
 }
 
-form {
-  width: 35vw;
-}
-
 input[type="text"] {
   margin: 3%;
-  padding: 10px;
+  padding: 0.8rem;
   width: 80%;
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 1.2rem;
   font-weight: 600;
-  border: 1px solid black;
+  background: pink;
+  border: none;
+}
+
+input[type="number"] {
+  margin: 3%;
+  padding: 0.8rem;
+  width: 80%;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: pink;
+  border: none;
+  color: #000;
+}
+
+@media screen and (max-width: 1000px) {
+  li {
+    font-size: 1rem;
+  }
+
+  input[type="text"] {
+    font-size: 1rem;
+  }
+
+  input[type="number"] {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #page-section {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  input[type="number"] {
+    width: 100%;
+  }
 }
